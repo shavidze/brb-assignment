@@ -32,7 +32,6 @@ const CommentForm: FC<Props> = ({ currentPost }) => {
             postId: currentPost.id,
             replies: [],
         };
-        debugger;
         addComment(commentData);
         reset();
     };
@@ -52,7 +51,7 @@ const CommentForm: FC<Props> = ({ currentPost }) => {
                         />
                     )}
                 />
-                {errors.name && <p className="error">name is required</p>}
+                {errors.name && <p className="error">Name is required</p>}
             </div>
             <div className="form-group">
                 <Controller
@@ -68,7 +67,9 @@ const CommentForm: FC<Props> = ({ currentPost }) => {
                         />
                     )}
                 />
-                {errors.body && <p className="error">comment is required</p>}
+                {errors.body && (
+                    <p className="error">Comment Body is required</p>
+                )}
             </div>
             <div className="form-group d-flex mb-2">
                 <input

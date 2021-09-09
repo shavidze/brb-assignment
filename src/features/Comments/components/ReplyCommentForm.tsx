@@ -1,8 +1,10 @@
 import { FC, useState } from "react";
 import { IComment } from "../../../constants/interfaces/Comment";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import styled from "styled-components";
 import { useReplyCommentService } from "../store/services";
+import Input from "../../../components/Input";
+import TextArea from "../../../components/TextArea";
 
 type Props = {
     comment: IComment;
@@ -30,8 +32,8 @@ const ReplyCommentForm: FC<Props> = ({ comment }) => {
     const [openReply, setOpenReply] = useState(false);
     const addReply = useReplyCommentService();
     const {
-        register,
         reset,
+        control,
         formState: { errors },
         handleSubmit,
     } = useForm();
@@ -52,24 +54,39 @@ const ReplyCommentForm: FC<Props> = ({ comment }) => {
             {openReply ? (
                 <form className="m-3 w-100" onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group d-flex flex-column mb-2">
-                        <input
-                            type="text"
-                            id="name"
-                            className="form-control"
-                            {...register("name", { required: true })}
+                        <Controller
+                            name="name"
+                            control={control}
+                            defaultValue=""
+                            rules={{ required: true }}
+                            render={({ field }) => (
+                                <Input
+                                    label="Name"
+                                    className="form-control"
+                                    {...field}
+                                />
+                            )}
                         />
                         {errors.name && (
-                            <p className="error">name is required</p>
+                            <p className="error">Name is required</p>
                         )}
                     </div>
                     <div className="form-group">
-                        <textarea
-                            placeholder="Reply..."
-                            className="form-control"
-                            {...register("body", { required: true })}
-                        ></textarea>
+                        <Controller
+                            name="body"
+                            control={control}
+                            rules={{ required: true }}
+                            defaultValue=""
+                            render={({ field }) => (
+                                <TextArea
+                                    label="Comment Body"
+                                    className="form-control"
+                                    {...field}
+                                />
+                            )}
+                        />
                         {errors.body && (
-                            <p className="error">comment is required</p>
+                            <p className="error">Comment Body is required</p>
                         )}
                     </div>
                     <div className="form-group mt-4">
