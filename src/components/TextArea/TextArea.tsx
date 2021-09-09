@@ -6,7 +6,6 @@ interface TextAreaProps extends InputHTMLAttributes<HTMLTextAreaElement> {
 }
 
 const TextArea: FC<TextAreaProps> = ({ label, name, className, ...props }) => {
-    console.log("label", props);
     return (
         <div className="field">
             <div className="control">
