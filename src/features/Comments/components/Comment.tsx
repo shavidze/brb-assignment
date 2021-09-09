@@ -4,7 +4,7 @@ import { IComment } from "../../../constants/interfaces/Comment";
 type Props = {
     comment: IComment;
     type: "parent" | "child";
-    key: string;
+
     index: number;
     handleShowReplies: (value: boolean, key: number) => void;
     showReplies: boolean[];
@@ -13,17 +13,16 @@ type Props = {
 const Comment: FC<Props> = ({
     comment,
     type,
-    key,
     index,
     handleShowReplies,
     showReplies,
 }) => {
-    const repliesComments = (comment.replies || []).map((comment) => {
+    const repliesComments = (comment.replies || []).map((cm, i) => {
         return (
             <Comment
-                key={comment.id}
+                key={index * i + i}
                 index={index}
-                comment={comment}
+                comment={cm}
                 handleShowReplies={handleShowReplies}
                 showReplies={showReplies}
                 type="child"

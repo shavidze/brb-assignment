@@ -22,10 +22,15 @@ const PostItemContainer = styled.div`
 
 type Props = {
     post: Post;
+    onPostClick: (post: Post) => void;
 };
-const PostItem: FC<Props> = ({ post }) => {
+const PostItem: FC<Props> = ({ post, onPostClick }) => {
     return (
-        <PostItemContainer className="card" style={{ width: "18rem" }}>
+        <PostItemContainer
+            className="card"
+            onClick={() => onPostClick(post)}
+            style={{ width: "18rem" }}
+        >
             <img
                 src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173"
                 className="card-img-top"

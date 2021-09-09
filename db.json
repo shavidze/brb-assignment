@@ -1,420 +1,61 @@
 {
   "posts": [
     {
-      "title": "book22222",
-      "description": "12323",
+      "title": "Speculation is the new luxury good",
+      "description": "Speculation is a great hobby if you can afford it, but it shouldn’t be confused with investment.",
       "username": "Saba",
       "id": 1
     },
     {
-      "title": "saba",
-      "description": "saba",
-      "username": "Saba",
+      "title": "The modern curriculum",
+      "description": "If this is what we need and what we value, why aren’t we teaching it?",
+      "username": "Seth",
       "id": 3
     },
     {
-      "title": "abcd",
-      "description": "abcd",
-      "username": "Saba",
+      "title": "Intentional connection in the digital office",
+      "description": "The real magic of connections at the office was that we were having these connections without trying. It’s not that they were better, it’s that they were effortless.",
+      "username": "Michael",
       "comments": [],
       "id": 6
     },
     {
-      "title": "book1",
-      "description": "dafadsf",
+      "title": "Creativity and leadership",
+      "description": "Management isn’t",
       "username": "Saba",
       "id": 7
-    },
-    {
-      "title": "axaaaa",
-      "description": "axaaa",
-      "username": "Saba",
-      "id": 8
     }
   ],
   "comments": [
     {
-      "body": "asdfasdfafds",
-      "name": "sadfa",
-      "postId": "1",
-      "replies": [
-        {
-          "name": "saba",
-          "body": "saba rep",
-          "replies": [
-            {
-              "name": "qve done",
-              "body": "body",
-              "replies": [
-                {
-                  "name": "qve done",
-                  "body": "body",
-                  "replies": [
-                    {
-                      "name": "qve done",
-                      "body": "body",
-                      "replies": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "jemala",
-          "body": "asdfasdfafd"
-        },
-        {
-          "name": "sabashav",
-          "body": "dsadfasdfasdf"
-        },
-        {
-          "name": "pavle",
-          "body": "pavle"
-        },
-        {
-          "name": "saba",
-          "body": "savsdadfasdf"
-        },
-        {
-          "name": "saba",
-          "body": "asdfasf"
-        },
-        {
-          "name": "vin xar shena",
-          "body": "asdfasfvav"
-        },
-        {
-          "name": "sadfa",
-          "body": "safda"
-        },
-        {
-          "name": "sadax",
-          "body": "sadxaf"
-        },
-        {
-          "name": "aq xar?",
-          "body": "aq xar?"
-        },
-        {
-          "name": "rogor xar",
-          "body": "rogor xar"
-        },
-        {
-          "name": "თთთ",
-          "body": "სადფასდფსადფ"
-        },
-        {
-          "name": "ასფსად",
-          "body": "ასფასდფ"
-        },
-        {
-          "name": "gggg",
-          "body": "ggg"
-        },
-        {
-          "name": "axali",
-          "body": "axali"
-        },
-        {
-          "name": "memeride",
-          "body": "memerdida"
-        },
-        {
-          "name": "addd ",
-          "body": "addddd"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "body": "asdfasdfafds",
-      "name": "sadfa",
-      "postId": "1",
-      "replies": [
-        {
-          "name": "davureplaot",
-          "body": "replay "
-        }
-      ],
-      "id": 3
-    },
-    {
-      "body": "asdfasdfafds",
-      "name": "sadfa",
+      "id": 1,
+      "body": "What's your first question about that post?",
+      "name": "Saba",
       "postId": 1,
       "replies": [
         {
-          "name": "saba",
-          "body": "safdasdfasfd"
-        },
-        {
-          "name": "saba",
-          "body": "asdfasdf"
-        },
-        {
-          "name": "Saba",
-          "body": "asdfasfd"
+          "name": "Michael",
+          "body": "This is my firs reply for your post"
         }
-      ],
-      "id": 4
+      ]
     },
     {
-      "body": "asdfasdfafds",
-      "name": "sadfa",
-      "postId": 1,
-      "replies": [],
-      "id": 5
+      "id": 2,
+      "name": "asdfasdfasdfasdf",
+      "replies": []
     },
     {
-      "body": "asdf",
-      "name": "safd",
-      "postId": 1,
-      "replies": [
-        {
-          "name": "asdfadf",
-          "body": "asdfsadf"
-        }
-      ],
-      "id": 6
-    },
-    {
-      "body": "asdf",
-      "name": "asdf",
-      "postId": 1,
-      "replies": [
-        {
-          "name": "axaaali",
-          "body": "axaaali"
-        }
-      ],
-      "id": 7
-    },
-    {
-      "body": "asdf",
-      "name": "asdfadsf",
-      "postId": 1,
-      "replies": [],
-      "id": 8
-    },
-    {
-      "body": "adsfa",
-      "name": "asdfadsf",
-      "postId": 1,
-      "replies": [],
-      "id": 9
-    },
-    {
-      "body": "adsfafds",
-      "name": "asdf",
-      "postId": 1,
-      "replies": [],
-      "id": 10
-    },
-    {
-      "body": "adsf",
-      "name": "asdf",
-      "postId": 1,
-      "replies": [],
-      "id": 11
-    },
-    {
-      "body": "asdfasdf",
-      "name": "asdfasdf",
-      "postId": 1,
-      "replies": [],
-      "id": 12
-    },
-    {
-      "body": "adsfasdf",
-      "name": "asfdadsf",
-      "postId": 1,
-      "replies": [],
-      "id": 13
-    },
-    {
-      "body": "asfdaf",
-      "name": "sadf",
-      "postId": 1,
-      "replies": [],
-      "id": 14
-    },
-    {
-      "body": "asdfasfd",
-      "name": "asdfsadf",
-      "postId": 1,
-      "replies": [],
-      "id": 15
-    },
-    {
-      "body": "asdfdsaf",
-      "name": "sadfa",
-      "postId": 1,
-      "replies": [],
-      "id": 16
-    },
-    {
-      "body": "asdfasdfasdf",
-      "name": "asdfasdf",
-      "postId": 1,
-      "replies": [],
-      "id": 17
-    },
-    {
-      "body": "axali komentari",
+      "id": 3,
       "name": "axali komentari",
       "postId": 1,
-      "replies": [],
-      "id": 18
-    },
-    {
-      "body": "asdfasdf",
-      "name": "asdfsadf",
-      "postId": 1,
-      "replies": [],
-      "id": 19
-    },
-    {
-      "body": "asdf",
-      "name": "asfasdf",
-      "postId": 1,
-      "replies": [],
-      "id": 20
-    },
-    {
-      "body": "sdasdf",
-      "name": "asfdasdfa",
-      "postId": 1,
-      "replies": [],
-      "id": 21
-    },
-    {
-      "body": "asfasdfasdf",
-      "name": "asdfasf",
-      "postId": 1,
-      "replies": [],
-      "id": 22
-    },
-    {
-      "body": "erti",
-      "name": "Sabaaa",
-      "postId": 1,
-      "replies": [],
-      "id": 23
-    },
-    {
-      "body": "sabaaaaorosamsadfasdfa",
-      "name": "saba",
-      "postId": 1,
-      "replies": [],
-      "id": 24
-    },
-    {
-      "body": "abcd",
-      "name": "abcd ",
-      "postId": 1,
-      "replies": [],
-      "id": 25
-    },
-    {
-      "body": "adsfsadf",
-      "name": "asdfasdf",
-      "postId": 1,
-      "replies": [],
-      "id": 26
-    },
-    {
-      "body": "asdfadsfaf",
-      "name": "baasdfasdf",
-      "postId": 1,
-      "replies": [],
-      "id": 27
-    },
-    {
-      "body": "asdfadsfaf",
-      "name": "baasdfasdf",
-      "postId": 1,
-      "replies": [],
-      "id": 28
-    },
-    {
-      "body": "comentari\n",
-      "name": "comentari",
-      "postId": 1,
-      "replies": [],
-      "id": 29
-    },
-    {
-      "body": "ხახა",
-      "name": "ახა",
-      "postId": 1,
-      "replies": [],
-      "id": 30
-    },
-    {
-      "body": "ხახახაა",
-      "name": "ახახ",
-      "postId": 1,
-      "replies": [],
-      "id": 31
-    },
-    {
-      "body": "testaaa",
-      "name": "testaa",
-      "postId": 1,
-      "replies": [],
-      "id": 32
-    },
-    {
-      "body": "asdfasdfasdfasdf",
-      "name": "asdfasdf",
-      "postId": 1,
-      "replies": [],
-      "id": 33
-    },
-    {
-      "body": "adasfdadsf",
-      "name": "testeatea",
-      "postId": 1,
-      "replies": [],
-      "id": 34
-    },
-    {
-      "body": "sadfasdfasdf",
-      "name": "axali saccccc",
-      "postId": 1,
-      "replies": [],
-      "id": 35
-    },
-    {
-      "body": "daemata",
-      "name": "ddd",
-      "postId": 1,
-      "replies": [],
-      "id": 36
-    },
-    {
-      "id": 37,
-      "body": "mateamate",
-      "name": "devemate",
-      "postId": 1,
       "replies": []
     },
     {
-      "id": 38,
-      "body": "TTTT",
-      "name": "TTT",
+      "id": 4,
+      "body": "komentari",
+      "name": "axali",
       "postId": 1,
       "replies": []
-    }
-  ],
-  "replies": [
-    {
-      "commentId": 16,
-      "name": "saba",
-      "body": "first reply",
-      "id": 1
     }
   ]
 }

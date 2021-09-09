@@ -18,11 +18,12 @@ const Comments: FC<Props> = ({ currentPost }) => {
     );
 
     useEffect(() => {
-        if (currentPost)
+        if (currentPost) {
             getComments(currentPost.id).then(() => {
                 setShowReplies(new Array(comments.length).fill(false));
             });
-    }, [getComments, comments.length]);
+        }
+    }, [getComments, comments.length, currentPost]);
 
     const handleShowReplies = (value: boolean, key: number) => {
         let newState = [...showReplies];
@@ -33,7 +34,7 @@ const Comments: FC<Props> = ({ currentPost }) => {
         <div className="col-md-6">
             <CommentForm currentPost={currentPost} />
             <div className="col-md-12">
-                {comments.length &&
+                {comments.length > 0 &&
                     comments.map((comment, index) => (
                         <>
                             <Comment
@@ -42,9 +43,10 @@ const Comments: FC<Props> = ({ currentPost }) => {
                                 index={index}
                                 handleShowReplies={handleShowReplies}
                                 showReplies={showReplies}
-                                key={comment.id}
+                                key={index}
                             />
-                            {showReplies[index] ? (
+                            {showReplies[index] &&
+                            comment.replies.length > 0 ? (
                                 <button
                                     className=" text-center mx-3 py-2 px-3 text-dark border m-4"
                                     style={{ width: "100%" }}
@@ -53,6 +55,13 @@ const Comments: FC<Props> = ({ currentPost }) => {
                                     }
                                 >
                                     Hide Replies
+                                </button>
+                            ) : comment.replies.length === 0 ? (
+                                <button
+                                    className=" text-center mx-3 py-2 px-3 text-dark border m-4"
+                                    style={{ width: "100%" }}
+                                >
+                                    No Replies
                                 </button>
                             ) : (
                                 <button
@@ -65,6 +74,7 @@ const Comments: FC<Props> = ({ currentPost }) => {
                                     Show Replies
                                 </button>
                             )}
+
                             <ReplyCommentForm comment={comment} />
                         </>
                     ))}

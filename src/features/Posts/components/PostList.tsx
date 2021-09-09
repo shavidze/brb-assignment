@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 import Loader from "../../../components/Loader";
@@ -21,9 +21,10 @@ const PostListContainer = styled.ul`
 
 type Props = {
     posts: Post[];
+    onPostSelect: (post: Post) => void;
 };
 
-const PostList: FC<Props> = ({ posts }) => {
+const PostList: FC<Props> = ({ posts, onPostSelect }) => {
     const { searchLoader } = useSelector((state: RootState) => state.post);
     const searchPosts = useSearchPostsService();
     const searchPostsThrottled = useSearchThrottled(searchPosts);
@@ -38,12 +39,17 @@ const PostList: FC<Props> = ({ posts }) => {
                 type="text"
                 className="form-control w-50 m-4"
                 onChange={(e) => handleSearch(e.target.value)}
-                // value={initialQuery.searchTerm}
                 placeholder="Enter name"
             />
 
             {posts.length > 0 && !searchLoader
-                ? posts.map((post, key) => <PostItem post={post} key={key} />)
+                ? posts.map((post, key) => (
+                      <PostItem
+                          onPostClick={(post: Post) => onPostSelect(post)}
+                          post={post}
+                          key={key}
+                      />
+                  ))
                 : ""}
             {searchLoader && <Loader position="inherit" />}
             {!searchLoader && !posts.length && (

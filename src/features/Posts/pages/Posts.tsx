@@ -9,7 +9,8 @@ import PostList from "../components/PostList";
 
 import { useSelector } from "react-redux";
 import { useGetPostsService } from "../store/services";
-import { FC, useEffect } from "react";
+import { FC, useEffect, useState } from "react";
+import { Post } from "../../../constants/interfaces/Post";
 
 const CommentsList = styled.ul`
     width: 50%;
@@ -25,6 +26,7 @@ const Container = styled.div`
 const Posts: FC = () => {
     const { posts, loading } = useSelector((state: RootState) => state.post);
     const getPosts = useGetPostsService();
+    const [selectedPost, setSelectedPost] = useState({} as Post);
 
     useEffect(() => {
         getPosts();
@@ -36,10 +38,13 @@ const Posts: FC = () => {
 
     return (
         <Container>
-            <PostList posts={posts} />
+            <PostList
+                posts={posts}
+                onPostSelect={(post: Post) => setSelectedPost(post)}
+            />
             <CommentsList>
                 <h1 className="m-4">Comments</h1>
-                <Comments currentPost={posts[0]} />
+                <Comments currentPost={selectedPost} />
             </CommentsList>
         </Container>
     );

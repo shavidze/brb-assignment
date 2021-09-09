@@ -1,8 +1,10 @@
 import { FC } from "react";
 import { Post } from "../../../constants/interfaces/Post";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { IComment } from "../../../constants/interfaces/Comment";
 import { useAddCommentService, useGetCommentsService } from "../store/services";
+import Input from "../../../components/Input";
+import TextArea from "../../../components/TextArea/TextArea";
 
 type Props = {
     currentPost: Post;
@@ -15,8 +17,8 @@ const CommentForm: FC<Props> = ({ currentPost }) => {
     const addComment = useAddCommentService();
     const getComments = useGetCommentsService();
     const {
-        register,
         reset,
+        control,
         formState: { errors },
         handleSubmit,
     } = useForm();
@@ -30,25 +32,42 @@ const CommentForm: FC<Props> = ({ currentPost }) => {
             postId: currentPost.id,
             replies: [],
         };
+        debugger;
         addComment(commentData);
         reset();
     };
     return (
         <form className="w-100 p-2" onSubmit={handleSubmit(onSubmit)}>
             <div className="form-group d-flex flex-column mb-2">
-                <input
-                    type="text"
-                    id="name"
-                    className="form-control"
-                    {...register("name", { required: true })}
+                <Controller
+                    name="name"
+                    control={control}
+                    defaultValue=""
+                    rules={{ required: true }}
+                    render={({ field }) => (
+                        <Input
+                            label="Name"
+                            className="form-control"
+                            {...field}
+                        />
+                    )}
                 />
                 {errors.name && <p className="error">name is required</p>}
             </div>
             <div className="form-group">
-                <textarea
-                    className="form-control"
-                    {...register("body", { required: true })}
-                ></textarea>
+                <Controller
+                    name="body"
+                    control={control}
+                    rules={{ required: true }}
+                    defaultValue=""
+                    render={({ field }) => (
+                        <TextArea
+                            label="Comment Body"
+                            className="form-control"
+                            {...field}
+                        />
+                    )}
+                />
                 {errors.body && <p className="error">comment is required</p>}
             </div>
             <div className="form-group d-flex mb-2">
