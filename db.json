@@ -1,82 +1,38 @@
 {
-  "posts": [
-    {
-      "title": "Speculation is the new luxury good",
-      "description": "Speculation is a great hobby if you can afford it, but it shouldn’t be confused with investment.",
-      "username": "Saba",
-      "id": 1
-    },
-    {
-      "title": "The modern curriculum",
-      "description": "If this is what we need and what we value, why aren’t we teaching it?",
-      "username": "Seth",
-      "id": 3
-    },
-    {
-      "title": "Intentional connection in the digital office",
-      "description": "The real magic of connections at the office was that we were having these connections without trying. It’s not that they were better, it’s that they were effortless.",
-      "username": "Michael",
-      "comments": [],
-      "id": 6
-    },
-    {
-      "title": "Creativity and leadership",
-      "description": "Management isn’t",
-      "username": "Saba",
-      "id": 7
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "What's your first question about that post?",
-      "name": "Saba",
-      "postId": 1,
-      "replies": [
+    "posts": [
         {
-          "name": "safdsd",
-          "body": "asdfasdf"
+            "title": "Speculation is the new luxury good",
+            "description": "Speculation is a great hobby if you can afford it, but it shouldn’t be confused with investment.",
+            "username": "Saba",
+            "id": 1
         },
         {
-          "name": "asdfsadf",
-          "body": "asdfasdf"
+            "title": "The modern curriculum",
+            "description": "If this is what we need and what we value, why aren’t we teaching it?",
+            "username": "Seth",
+            "id": 3
         },
         {
-          "name": "asdfasdf",
-          "body": "asdfasdf"
+            "title": "Intentional connection in the digital office",
+            "description": "The real magic of connections at the office was that we were having these connections without trying. It’s not that they were better, it’s that they were effortless.",
+            "username": "Michael",
+            "comments": [],
+            "id": 6
         },
         {
-          "name": "asdfasdf",
-          "body": "asdfsadf"
-        },
-        {
-          "name": "asdfsadf",
-          "body": "asdfasdfasdf"
+            "title": "Creativity and leadership",
+            "description": "Management isn’t",
+            "username": "Saba",
+            "id": 7
         }
-      ]
-    },
-    {
-      "id": 2,
-      "body": "asdfasdf",
-      "name": "sadfa",
-      "postId": 7,
-      "replies": []
-    },
-    {
-      "id": 3,
-      "body": "asdfasdf",
-      "name": "asdf",
-      "postId": 1,
-      "replies": [
+    ],
+    "comments": [
         {
-          "name": "asdfsadf",
-          "body": "asdfasdf"
-        },
-        {
-          "name": "asdfasdfasdf",
-          "body": "asdfasdf"
+            "id": 1,
+            "body": "What's your first question about that post?",
+            "name": "Saba",
+            "postId": 1,
+            "replies": []
         }
-      ]
-    }
-  ]
+    ]
 }
