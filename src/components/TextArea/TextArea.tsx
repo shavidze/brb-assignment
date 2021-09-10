@@ -1,6 +1,6 @@
-import { FC, InputHTMLAttributes } from "react";
+import { FC, InputHTMLAttributes, TextareaHTMLAttributes } from "react";
 
-interface TextAreaProps extends InputHTMLAttributes<HTMLTextAreaElement> {
+interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
     label: string;
     name: string;
 }
