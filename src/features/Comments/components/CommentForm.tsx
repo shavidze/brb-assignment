@@ -33,7 +33,8 @@ const CommentForm: FC<Props> = ({ currentPost }) => {
             replies: [],
         };
         addComment(commentData);
-        reset();
+        debugger;
+        reset({ name: "", body: "" });
     };
     return (
         <form className="w-100 p-2" onSubmit={handleSubmit(onSubmit)}>

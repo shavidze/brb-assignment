@@ -29,7 +29,7 @@ const Posts: FC = () => {
     const [selectedPost, setSelectedPost] = useState({} as Post);
 
     useEffect(() => {
-        getPosts();
+        getPosts().then(() => setSelectedPost(posts[0]));
     }, [getPosts]);
 
     if (loading) {
