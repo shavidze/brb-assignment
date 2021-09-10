@@ -51,6 +51,7 @@ const postsReducer: Reducer<PostState, PostActions> = (
                 ...state,
                 searchLoader: false,
                 posts: action.payload,
+                selectedPost: action.payload[0],
             };
         case Actions.SEARCH_POST_FAILURE:
             return {

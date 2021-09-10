@@ -35,58 +35,65 @@ const Comments: FC<Props> = ({ currentPost }) => {
     const onReply = () => {
         getComments(currentPost.id);
     };
+
     return (
-        <div className="col-md-6">
-            <CommentForm currentPost={currentPost} />
-            <div className="col-md-12">
-                {comments.length > 0 &&
-                    comments.map((comment, index) => (
-                        <div>
-                            <Comment
-                                comment={comment}
-                                type="parent"
-                                index={index}
-                                handleShowReplies={handleShowReplies}
-                                showReplies={showReplies}
-                                key={index}
-                            />
-                            {showReplies[index] &&
-                            comment.replies.length > 0 ? (
-                                <button
-                                    className=" text-center mx-3 py-2 px-3 text-dark border m-4"
-                                    style={{ width: "100%" }}
-                                    onClick={() =>
-                                        handleShowReplies(false, index)
-                                    }
-                                >
-                                    Hide Replies
-                                </button>
-                            ) : comment.replies.length === 0 ? (
-                                <button
-                                    className=" text-center mx-3 py-2 px-3 text-dark border m-4"
-                                    style={{ width: "100%" }}
-                                >
-                                    No Replies
-                                </button>
-                            ) : (
-                                <button
-                                    className=" text-center mx-3 py-2 px-3 text-dark border m-4"
-                                    style={{ width: "100%" }}
-                                    onClick={() =>
-                                        handleShowReplies(true, index)
-                                    }
-                                >
-                                    Show Replies
-                                </button>
-                            )}
-                            <ReplyCommentForm
-                                onReply={onReply}
-                                comment={comment}
-                            />
-                        </div>
-                    ))}
-            </div>
-        </div>
+        <>
+            {currentPost ? (
+                <div className="col-md-6">
+                    <CommentForm currentPost={currentPost} />
+                    <div className="col-md-12">
+                        {comments.length > 0 &&
+                            comments.map((comment, index) => (
+                                <div>
+                                    <Comment
+                                        comment={comment}
+                                        type="parent"
+                                        index={index}
+                                        handleShowReplies={handleShowReplies}
+                                        showReplies={showReplies}
+                                        key={index}
+                                    />
+                                    {showReplies[index] &&
+                                    comment.replies.length > 0 ? (
+                                        <button
+                                            className=" text-center mx-3 py-2 px-3 text-dark border m-4"
+                                            style={{ width: "100%" }}
+                                            onClick={() =>
+                                                handleShowReplies(false, index)
+                                            }
+                                        >
+                                            Hide Replies
+                                        </button>
+                                    ) : comment.replies.length === 0 ? (
+                                        <button
+                                            className=" text-center mx-3 py-2 px-3 text-dark border m-4"
+                                            style={{ width: "100%" }}
+                                        >
+                                            No Replies
+                                        </button>
+                                    ) : (
+                                        <button
+                                            className=" text-center mx-3 py-2 px-3 text-dark border m-4"
+                                            style={{ width: "100%" }}
+                                            onClick={() =>
+                                                handleShowReplies(true, index)
+                                            }
+                                        >
+                                            Show Replies
+                                        </button>
+                                    )}
+                                    <ReplyCommentForm
+                                        onReply={onReply}
+                                        comment={comment}
+                                    />
+                                </div>
+                            ))}
+                    </div>
+                </div>
+            ) : (
+                <div></div>
+            )}
+        </>
     );
 };
 export default Comments;
