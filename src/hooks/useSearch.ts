@@ -19,7 +19,7 @@ export const useSearchThrottled = (
             ) {
                 return searchEntity(searchParams);
             }
-        }, 1000),
+        }, 2000),
         [searchEntity]
     );
 };

@@ -3,6 +3,7 @@ import { Post } from "../../../constants/interfaces/Post";
 import { Actions, PostActions } from "./actions";
 
 export interface PostState {
+    selectedPost: Post;
     posts: Post[];
     loading: boolean;
     searchLoader: boolean;
@@ -10,6 +11,7 @@ export interface PostState {
 }
 const initialState: PostState = {
     posts: [],
+    selectedPost: {} as Post,
     loading: true,
     searchLoader: false,
     error: "",
@@ -26,16 +28,19 @@ const postsReducer: Reducer<PostState, PostActions> = (
                 loading: true,
             };
         case Actions.GET_POSTS_SUCCESS:
+            debugger;
             return {
                 ...state,
                 loading: false,
                 posts: action.payload,
+                selectedPost: action.payload[0],
             };
         case Actions.GET_POSTS_FAILURE:
             return {
                 ...state,
                 loading: true,
                 error: action.payload,
+                selectedPost: {} as Post,
             };
         case Actions.SEARCH_POST_START:
             return {

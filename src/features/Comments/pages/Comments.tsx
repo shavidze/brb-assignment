@@ -24,7 +24,7 @@ const Comments: FC<Props> = ({ currentPost }) => {
                 setShowReplies(new Array(comments.length).fill(false));
             });
         }
-    }, [getComments, currentPost]);
+    }, [getComments, currentPost, comments.length]);
 
     const handleShowReplies = (value: boolean, key: number) => {
         let newState = [...showReplies];

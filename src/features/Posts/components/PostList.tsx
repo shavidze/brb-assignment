@@ -29,6 +29,7 @@ const PostList: FC<Props> = ({ posts, onPostSelect }) => {
     const searchPosts = useSearchPostsService();
     const searchPostsThrottled = useSearchThrottled(searchPosts);
     const handleSearch = (inputValue: string) => {
+        debugger;
         searchPostsThrottled({ searchTerm: inputValue } as SearchQuery);
     };
 

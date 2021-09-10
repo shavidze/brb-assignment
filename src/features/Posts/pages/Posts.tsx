@@ -25,20 +25,23 @@ const Container = styled.div`
 `;
 
 const Posts: FC = () => {
-    const { posts, loading } = useSelector((state: RootState) => state.post);
+    const { posts, selectedPost, loading } = useSelector(
+        (state: RootState) => state.post
+    );
     const getPosts = useGetPostsService();
-    const [selectedPost, setSelectedPost] = useState({} as Post);
-    const ifPostChanged = useIfChanged(posts);
+    const ifPostChanged = useIfChanged(selectedPost);
+    const [currentPost, setCurrentPost] = useState<Post>(selectedPost);
     useEffect(() => {
-        getPosts().then(() => setSelectedPost(posts[0]));
-    }, [getPosts, posts.length]);
+        getPosts();
+    }, [getPosts]);
 
     if (loading) {
         return <Loader position="fixed" />;
     }
 
     const onPostChange = (post: Post) => {
-        setSelectedPost(post);
+        debugger;
+        setCurrentPost(post);
     };
 
     return (
@@ -46,7 +49,7 @@ const Posts: FC = () => {
             <PostList posts={posts} onPostSelect={onPostChange} />
             <CommentsList>
                 <h1 className="m-4">Comments</h1>
-                <Comments currentPost={selectedPost} />
+                <Comments currentPost={currentPost} />
             </CommentsList>
         </Container>
     );
