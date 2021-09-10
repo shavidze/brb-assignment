@@ -47,7 +47,7 @@ const ReplyCommentForm: FC<Props> = ({ comment }) => {
             addReply(comment.id, newCommentData).then(() =>
                 setOpenReply(false)
             );
-        reset();
+        reset({ name: "", body: "" });
     };
     return (
         <>

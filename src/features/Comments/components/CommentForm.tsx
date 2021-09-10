@@ -33,7 +33,6 @@ const CommentForm: FC<Props> = ({ currentPost }) => {
             replies: [],
         };
         addComment(commentData);
-        debugger;
         reset({ name: "", body: "" });
     };
     return (

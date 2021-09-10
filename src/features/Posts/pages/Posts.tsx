@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 import { useGetPostsService } from "../store/services";
 import { FC, useEffect, useState } from "react";
 import { Post } from "../../../constants/interfaces/Post";
+import { useIfChanged } from "../../../hooks/usePrevious";
 
 const CommentsList = styled.ul`
     width: 50%;
@@ -27,21 +28,22 @@ const Posts: FC = () => {
     const { posts, loading } = useSelector((state: RootState) => state.post);
     const getPosts = useGetPostsService();
     const [selectedPost, setSelectedPost] = useState({} as Post);
-
+    const ifPostChanged = useIfChanged(posts);
     useEffect(() => {
         getPosts().then(() => setSelectedPost(posts[0]));
-    }, [getPosts]);
+    }, [getPosts, posts.length]);
 
     if (loading) {
         return <Loader position="fixed" />;
     }
 
+    const onPostChange = (post: Post) => {
+        setSelectedPost(post);
+    };
+
     return (
         <Container>
-            <PostList
-                posts={posts}
-                onPostSelect={(post: Post) => setSelectedPost(post)}
-            />
+            <PostList posts={posts} onPostSelect={onPostChange} />
             <CommentsList>
                 <h1 className="m-4">Comments</h1>
                 <Comments currentPost={selectedPost} />

@@ -6,6 +6,7 @@ import CommentForm from "../components/CommentForm";
 import ReplyCommentForm from "../components/ReplyCommentForm";
 import Comment from "../components/Comment";
 import { useGetCommentsService } from "../store/services";
+import { useIfChanged } from "../../../hooks/usePrevious";
 
 type Props = {
     currentPost: Post;
@@ -18,25 +19,26 @@ const Comments: FC<Props> = ({ currentPost }) => {
     );
 
     useEffect(() => {
-        if (currentPost) {
+        if (currentPost && currentPost.id) {
             getComments(currentPost.id).then(() => {
                 setShowReplies(new Array(comments.length).fill(false));
             });
         }
-    }, [getComments, comments.length, currentPost]);
+    }, [getComments, currentPost]);
 
     const handleShowReplies = (value: boolean, key: number) => {
         let newState = [...showReplies];
         newState[key] = value;
         setShowReplies(newState);
     };
+
     return (
         <div className="col-md-6">
             <CommentForm currentPost={currentPost} />
             <div className="col-md-12">
                 {comments.length > 0 &&
                     comments.map((comment, index) => (
-                        <>
+                        <div>
                             <Comment
                                 comment={comment}
                                 type="parent"
@@ -74,9 +76,8 @@ const Comments: FC<Props> = ({ currentPost }) => {
                                     Show Replies
                                 </button>
                             )}
-
                             <ReplyCommentForm comment={comment} />
-                        </>
+                        </div>
                     ))}
             </div>
         </div>
