@@ -8,6 +8,7 @@ import TextArea from "../../../components/TextArea";
 
 type Props = {
     comment: IComment;
+    onReply: () => void;
 };
 
 const ReplyButton = styled.button`
@@ -28,7 +29,7 @@ const ReplyButton = styled.button`
     }
 `;
 
-const ReplyCommentForm: FC<Props> = ({ comment }) => {
+const ReplyCommentForm: FC<Props> = ({ comment, onReply }) => {
     const [openReply, setOpenReply] = useState(false);
     const addReply = useReplyCommentService();
     const {
@@ -48,6 +49,7 @@ const ReplyCommentForm: FC<Props> = ({ comment }) => {
                 setOpenReply(false)
             );
         reset({ name: "", body: "" });
+        onReply();
     };
     return (
         <>

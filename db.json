@@ -34,288 +34,32 @@
       "postId": 1,
       "replies": [
         {
-          "name": "Michael",
-          "body": "This is my firs reply for your post"
-        },
-        {
-          "name": "asdfasd",
+          "name": "safdsd",
           "body": "asdfasdf"
         },
         {
-          "name": "axaxa",
-          "body": "xaxaaxa"
-        },
-        {
-          "name": "asdfasd",
+          "name": "asdfsadf",
           "body": "asdfasdf"
-        },
-        {
-          "name": "asdfa",
-          "body": "asdfasdf"
-        },
-        {
-          "name": "aaaaaaaaaa",
-          "body": "aaaaaaaaaa"
         },
         {
           "name": "asdfasdf",
           "body": "asdfasdf"
         },
         {
-          "name": "saba",
-          "body": "sabasb"
+          "name": "asdfasdf",
+          "body": "asdfsadf"
         },
         {
-          "name": "axali",
-          "body": "fasdfasdf"
-        },
-        {
-          "name": "afsdf",
-          "body": "asdf"
-        },
-        {
-          "name": "afasdf",
-          "body": "asdf"
-        },
-        {
-          "name": "asdf",
-          "body": "asdf"
-        },
-        {
-          "name": "asdfasdfasdf",
-          "body": "asdfasdfasdfasdf"
-        },
-        {
-          "name": "testa",
-          "body": "tesssta"
-        },
-        {
-          "name": "axaaa",
-          "body": "axaaa"
-        },
-        {
-          "name": "asd",
-          "body": "asd"
-        },
-        {
-          "name": "testa",
-          "body": "testa"
-        },
-        {
-          "name": "asdf",
-          "body": "asdf"
-        },
-        {
-          "name": "ახააა",
-          "body": "ახააა"
-        },
-        {
-          "name": "asdf",
-          "body": "asdf"
+          "name": "asdfsadf",
+          "body": "asdfasdfasdf"
         }
       ]
     },
     {
       "id": 2,
-      "name": "asdfasdfasdfasdf",
-      "replies": []
-    },
-    {
-      "id": 3,
-      "name": "axali komentari",
-      "postId": 1,
-      "replies": []
-    },
-    {
-      "id": 4,
-      "body": "komentari",
-      "name": "axali",
-      "postId": 1,
-      "replies": [
-        {
-          "name": "აბც",
-          "body": "ABC"
-        }
-      ]
-    },
-    {
-      "id": 5,
       "body": "asdfasdf",
-      "name": "asdfasdf",
-      "postId": 6,
-      "replies": [
-        {
-          "name": "asdf",
-          "body": "asdf"
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "body": "asdfasdf",
-      "name": "asdf",
-      "postId": 3,
-      "replies": [
-        {
-          "name": "asdf",
-          "body": "asdf"
-        },
-        {
-          "name": "asdf",
-          "body": "asdf"
-        },
-        {
-          "name": "asdf",
-          "body": "asdfasdf"
-        },
-        {
-          "name": "test",
-          "body": "test"
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "body": "ასდფასდფ",
-      "name": "ასდფასდფ",
-      "replies": []
-    },
-    {
-      "id": 8,
-      "body": "ასდფასდფ",
-      "name": "ასდფასდ",
+      "name": "sadfa",
       "postId": 7,
-      "replies": [
-        {
-          "name": "asdf",
-          "body": "asdf"
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "body": "aasdfasdf",
-      "name": "asdfasd",
-      "replies": []
-    },
-    {
-      "id": 10,
-      "body": "asdfasdf",
-      "name": "asdfasdf",
-      "postId": 6,
-      "replies": []
-    },
-    {
-      "id": 11,
-      "body": "asdfasdf",
-      "name": "asdfas",
-      "postId": 6,
-      "replies": [
-        {
-          "name": "asdf",
-          "body": "asfd"
-        }
-      ]
-    },
-    {
-      "id": 12,
-      "body": "asfasdf",
-      "name": "asdfa",
-      "postId": 3,
-      "replies": [
-        {
-          "name": "asdfasdf",
-          "body": "asdfasdf"
-        }
-      ]
-    },
-    {
-      "id": 13,
-      "body": "asdfasdf",
-      "name": "asdfasdf",
-      "postId": 6,
-      "replies": []
-    },
-    {
-      "id": 14,
-      "body": "asdf",
-      "name": "asdf",
-      "postId": 3,
-      "replies": []
-    },
-    {
-      "id": 15,
-      "body": "aaaa",
-      "name": "aaa",
-      "postId": 3,
-      "replies": []
-    },
-    {
-      "id": 16,
-      "body": "asdfasdf",
-      "name": "adsf",
-      "postId": 3,
-      "replies": []
-    },
-    {
-      "id": 17,
-      "body": "axaxa",
-      "name": "axa",
-      "postId": 3,
-      "replies": []
-    },
-    {
-      "id": 18,
-      "body": "asdf",
-      "name": "asdf",
-      "postId": 6,
-      "replies": []
-    },
-    {
-      "id": 19,
-      "body": "test",
-      "name": "test",
-      "postId": 6,
-      "replies": []
-    },
-    {
-      "id": 20,
-      "body": "asdfasdfasdf",
-      "name": "asdf",
-      "postId": 1,
-      "replies": [
-        {
-          "name": "sba",
-          "body": "basb"
-        }
-      ]
-    },
-    {
-      "id": 21,
-      "body": "asdf",
-      "name": "asdf",
-      "postId": 1,
-      "replies": []
-    },
-    {
-      "id": 22,
-      "body": "axaaa",
-      "name": "axaa",
-      "postId": 1,
-      "replies": []
-    },
-    {
-      "id": 23,
-      "body": "ასდფ",
-      "name": "ადფ",
-      "postId": 1,
-      "replies": []
-    },
-    {
-      "id": 24,
-      "body": "asdf",
-      "name": "asdf",
-      "postId": 1,
       "replies": []
     }
   ]

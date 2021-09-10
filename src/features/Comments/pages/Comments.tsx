@@ -6,33 +6,35 @@ import CommentForm from "../components/CommentForm";
 import ReplyCommentForm from "../components/ReplyCommentForm";
 import Comment from "../components/Comment";
 import { useGetCommentsService } from "../store/services";
-import { useIfChanged } from "../../../hooks/usePrevious";
-
+import { useIfChanged, usePrevious } from "../../../hooks/usePrevious";
 type Props = {
     currentPost: Post;
 };
 const Comments: FC<Props> = ({ currentPost }) => {
-    debugger;
     const getComments = useGetCommentsService();
     const { comments } = useSelector((state: RootState) => state.comment);
     const [showReplies, setShowReplies] = useState(
         new Array(comments.length).fill(false)
     );
-
+    const ifCommentsChanged = useIfChanged(comments);
+    const ifShowRepliesChanged = useIfChanged(showReplies);
     useEffect(() => {
         if (currentPost && currentPost.id) {
             getComments(currentPost.id).then(() => {
-                setShowReplies(new Array(comments.length).fill(false));
+                if (ifShowRepliesChanged)
+                    setShowReplies(new Array(comments.length).fill(false));
             });
         }
-    }, [getComments, currentPost, comments.length]);
+    }, [getComments, currentPost, ifCommentsChanged]);
 
     const handleShowReplies = (value: boolean, key: number) => {
         let newState = [...showReplies];
         newState[key] = value;
         setShowReplies(newState);
     };
-
+    const onReply = () => {
+        getComments(currentPost.id);
+    };
     return (
         <div className="col-md-6">
             <CommentForm currentPost={currentPost} />
@@ -77,7 +79,10 @@ const Comments: FC<Props> = ({ currentPost }) => {
                                     Show Replies
                                 </button>
                             )}
-                            <ReplyCommentForm comment={comment} />
+                            <ReplyCommentForm
+                                onReply={onReply}
+                                comment={comment}
+                            />
                         </div>
                     ))}
             </div>
