@@ -17,7 +17,7 @@ import {
     getCommentsFailure,
     getCommentsStart,
     getCommentsSuccess,
-} from "./action";
+} from "./actions";
 import { IComment } from "../../../constants/interfaces/Comment";
 
 export const useGetCommentsService = () => {

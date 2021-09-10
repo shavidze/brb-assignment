@@ -7,7 +7,7 @@ import {
     searchPostFailure,
     searchPostStart,
     searchPostSuccess,
-} from "./action";
+} from "./actions";
 import { toast } from "react-toastify";
 import { useGetPostsApi, useSearchPostsApi } from "../api";
 import { SearchQuery } from "../../../constants/interfaces/Filters";

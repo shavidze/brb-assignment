@@ -1,6 +1,6 @@
 import { Reducer } from "redux";
 import { IComment } from "../../../constants/interfaces/Comment";
-import { Actions, PostActions } from "./action";
+import { Actions, PostActions } from "./actions";
 
 export interface CommentState {
     comments: IComment[];

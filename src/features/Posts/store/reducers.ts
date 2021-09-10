@@ -1,6 +1,6 @@
 import { Reducer } from "redux";
 import { Post } from "../../../constants/interfaces/Post";
-import { Actions, PostActions } from "./action";
+import { Actions, PostActions } from "./actions";
 
 export interface PostState {
     posts: Post[];

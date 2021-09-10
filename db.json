@@ -63,7 +63,12 @@
       "body": "komentari",
       "name": "axali",
       "postId": 1,
-      "replies": []
+      "replies": [
+        {
+          "name": "აბც",
+          "body": "ABC"
+        }
+      ]
     }
   ]
 }
