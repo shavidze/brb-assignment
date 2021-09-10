@@ -20,7 +20,6 @@ export const useGetPostsService = () => {
         dispatch(getPostsStart());
         return getPostsApi()
             .then((response: any) => {
-                debugger;
                 dispatch(getPostsSuccess(response.data));
             })
             .catch((error: any) => {

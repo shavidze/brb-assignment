@@ -25,28 +25,18 @@ const Container = styled.div`
 `;
 
 const Posts: FC = () => {
-    const { posts, selectedPost, loading } = useSelector(
-        (state: RootState) => state.post
-    );
-    const getPosts = useGetPostsService();
-    const ifPostChanged = useIfChanged(selectedPost);
+    const { selectedPost } = useSelector((state: RootState) => state.post);
+
     const [currentPost, setCurrentPost] = useState<Post>(selectedPost);
+
     useEffect(() => {
-        getPosts();
-    }, [getPosts]);
-
-    if (loading) {
-        return <Loader position="fixed" />;
-    }
-
-    const onPostChange = (post: Post) => {
-        debugger;
-        setCurrentPost(post);
-    };
+        setCurrentPost(selectedPost);
+    }, [selectedPost]);
 
     return (
         <Container>
-            <PostList posts={posts} onPostSelect={onPostChange} />
+            <PostList onPostSelect={(post: Post) => setCurrentPost(post)} />
+
             <CommentsList>
                 <h1 className="m-4">Comments</h1>
                 <Comments currentPost={currentPost} />

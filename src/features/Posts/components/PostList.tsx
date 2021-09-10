@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 import Loader from "../../../components/Loader";
@@ -6,7 +6,7 @@ import { SearchQuery } from "../../../constants/interfaces/Filters";
 import { Post } from "../../../constants/interfaces/Post";
 import { useSearchThrottled } from "../../../hooks/useSearch";
 import { RootState } from "../../../store/store";
-import { useSearchPostsService } from "../store/services";
+import { useGetPostsService, useSearchPostsService } from "../store/services";
 import PostItem from "./PostItem";
 
 const PostListContainer = styled.ul`
@@ -20,18 +20,27 @@ const PostListContainer = styled.ul`
 `;
 
 type Props = {
-    posts: Post[];
     onPostSelect: (post: Post) => void;
 };
 
-const PostList: FC<Props> = ({ posts, onPostSelect }) => {
-    const { searchLoader } = useSelector((state: RootState) => state.post);
+const PostList: FC<Props> = ({ onPostSelect }) => {
+    const { searchLoader, loading, posts } = useSelector(
+        (state: RootState) => state.post
+    );
     const searchPosts = useSearchPostsService();
     const searchPostsThrottled = useSearchThrottled(searchPosts);
     const handleSearch = (inputValue: string) => {
-        debugger;
         searchPostsThrottled({ searchTerm: inputValue } as SearchQuery);
     };
+    const getPosts = useGetPostsService();
+
+    useEffect(() => {
+        getPosts();
+    }, [getPosts]);
+
+    if (loading) {
+        return <Loader position="fixed" />;
+    }
 
     return (
         <PostListContainer>

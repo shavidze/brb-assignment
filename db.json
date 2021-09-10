@@ -108,6 +108,10 @@
         {
           "name": "ახააა",
           "body": "ახააა"
+        },
+        {
+          "name": "asdf",
+          "body": "asdf"
         }
       ]
     },
@@ -279,7 +283,12 @@
       "body": "asdfasdfasdf",
       "name": "asdf",
       "postId": 1,
-      "replies": []
+      "replies": [
+        {
+          "name": "sba",
+          "body": "basb"
+        }
+      ]
     },
     {
       "id": 21,

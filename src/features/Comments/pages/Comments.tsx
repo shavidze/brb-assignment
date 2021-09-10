@@ -12,6 +12,7 @@ type Props = {
     currentPost: Post;
 };
 const Comments: FC<Props> = ({ currentPost }) => {
+    debugger;
     const getComments = useGetCommentsService();
     const { comments } = useSelector((state: RootState) => state.comment);
     const [showReplies, setShowReplies] = useState(

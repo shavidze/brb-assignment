@@ -28,7 +28,6 @@ const postsReducer: Reducer<PostState, PostActions> = (
                 loading: true,
             };
         case Actions.GET_POSTS_SUCCESS:
-            debugger;
             return {
                 ...state,
                 loading: false,
